@@ -1,15 +1,48 @@
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg: #333;
+    --header-text: white;
+    --section-bg: white;
+    --card-border: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='dark'] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1e1e1e;
+    --header-text: #e0e0e0;
+    --section-bg: #1e1e1e;
+    --card-border: #444;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     padding: 1rem;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#theme-toggle {
+    background: var(--header-text);
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 nav ul {
@@ -25,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--header-text);
     text-decoration: none;
 }
 
@@ -35,10 +68,10 @@ main {
 
 section {
     margin-bottom: 2rem;
-    background: white;
+    background: var(--section-bg);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 
 .card-container {
@@ -48,10 +81,11 @@ section {
 }
 
 .card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--card-border);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px var(--shadow-color);
+    background-color: var(--section-bg);
 }
 
 .card img {
@@ -121,6 +155,6 @@ section {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--header-text);
 }
