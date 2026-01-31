@@ -1,5 +1,9 @@
 # **AI Development Guidelines for Modern Web Projects in Firebase Studio**
 
+## **Global Communication Rules**
+* **언어 설정:** 모든 답변과 설명은 반드시 **한국어**로 작성합니다.
+* **기술 용어:** 코드는 영문으로 작성하되, 해당 코드에 대한 설명과 주석은 한국어를 기본으로 합니다.
+
 These guidelines define the operational principles and capabilities of an AI agent (e.g., Gemini) interacting with framework-less web projects (HTML, CSS, JavaScript) within the Firebase Studio environment. The goal is to enable an efficient, automated, and error-resilient application design and development workflow that leverages modern, widely supported web standards (Baseline).
 
 ## **Environment & Context Awareness**
